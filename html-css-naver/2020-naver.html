@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1190" />
+        <meta name="robots" content="index, nofollow" />
+        <meta name="description" content="짭이버 메인에서 다양하지 않고 유용하지 않은 컨텐츠를 만나 보세요.">
+        <link rel="shortcut icon" type="image/x-icon" href="prepare/favicon.ico" />
+        <link rel="stylesheet" href="./2020-naver.css" />  
+        <title>짭이버</title>
+    </head>
+    <body>
+        <!--<div id="u_skip">
+            <a href=""><span>뉴스스탠드 바로가기</span></a>
+            <a href=""><span>주제별캐스트 바로가기</span></a>
+            <a href=""><span>타임스퀘어 바로가기</span></a>
+            <a href=""><span>쇼핑캐스트 바로가기</span></a>
+            <a href=""><span>로그인 바로가기</span></a>
+        </div>
+        -->
+        
+        <div id="wrap">
+
+            
+            <header role="banner">
+                <div class="special_bg">
+                    <div class="group_flex">
+                        <div class="logo_area">
+                            <h1 class="logo_default">
+                                <a href="https://www.naver.com" class="logo_naver"><span class="blind">네이버</span></a>
+                            </h1>
+                        </div>
+                        <div class="service_area">
+                            <a href="" id="NM_set_home_btn" class="link_set">
+                                네이버를 시작페이지로
+                            </a>
+                            <i class="sa_bar"></i>
+                            <a href="" class="link_jrnaver">
+                                <i class="ico_jrnaver"></i>
+                                <span class="blind">쥬니어네이버</span>
+                            </a>
+
+                            <a href="" class="link_happybin">
+                                <i class="ico_happybin"></i>
+                                <span class="blind">해피빈</span>
+                            </a>
+                        </div>
+                        <div id="search" class="search_area">
+                            <form id="sfrom" action="" method="GET">
+                                <fieldset>
+                                    <legend class="blind">검색</legend>
+                                    <div class="green_window">
+                                        <input id="query" name = "query" type="text" title="검색어 입력" maxlength="255" class="input_text" tabindex="1" 
+                                        accesskey="5" style="ime-mode:active" autocomplete="off" onclick="document.getElementById('fbm').value=1" value>
+                                    </div>
+
+                                    <button id="search_btn" type="submit" title="검색" tabindex="3" class="btn_submit">
+                                        <span class="blind">검색</span>
+                                        <span class="ico_search_submit"></span>
+                                    </button>
+
+                                </fieldset>
+                            </form>
+                            <a href="" id="ke_kbd_btn" role="button" class="btn_keyboard" onclick="nx_ime_load(this)" data-clk="ime">
+                                <span class="ico_keyboard"></span>
+                                <p class="msg_keybord"><span class="blind">입력도구</span></p>
+                            </a>
+                            <div id="nautocomplete" class="autocomplete">
+                                <a href="" role="button" tabindex="2" class="btn_arw _btn_arw fold">
+                                    <span class="blind _text">자동완성/최근검색어 펼치기</span>
+                                    <span class="ico_arr"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <nav id="gnb">
+                    <div id="NM_FAVORITE" class="gnb_inner">
+                        <div class="group_nav">
+                            <ul class="list_nav type_fix">
+                                <li class="nav_item"><a href="" class="nav"><i class="ico_mail"></i>메일</a></li>
+                                <li class="nav_item"><a href="" class="nav">카페</a></li>
+                                <li class="nav_item"><a href="" class="nav">블로그</a></li>
+                                <li class="nav_item"><a href="" class="nav">지식iN</a></li>
+                                <li class="nav_item"><a href="" class="nav">쇼핑</a></li>
+                                <li class="nav_item"><a href="" class="nav">Pay</a></li>
+                                <li class="nav_item"><a href="" class="nav"><i class="ico_tv"></i>TV</a></li>
+                            </ul>
+                            <ul class="list_nav NM_FAVORITE_LIST">
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">사전</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">뉴스</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">부동산</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">지도</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">영화</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">뮤직</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">책</a></li>
+                                <li class="nav_item"><a href="" class="nav" data-clk="svc.dic">웹툰</a></li>   
+                            </ul>
+                            <ul class="list_nav type_empty" style="display: none;"></ul>
+                            <a href="#" role="button" class="btn_more">
+                                더보기
+                            </a>
+
+                            <div class="ly_btn_area">
+                                <a href="" class="btn_NM_FAVORITE_ALL">서비스 전체보기</a>
+                                <a href="#" role="button" class="btn btn_set">메뉴설정</a>
+                                <a href="#" role="button" class="btn btn_reset" style="display: none;">초기화</a>
+                                <a href="#" role="button" class="btn btn_save" style="display: none;">저장</a>
+
+                            </div>
+                        </div>
+                        <div id="rtk" class="group_keyword">
+                            <div id="NM_RTK_ROLLING_WRAP" class="keyword_area">
+                                <a href="#" class="link_keyword">
+                                    <i class="ico_error"></i>
+                                    <span class="keyword">검색어 필터 설정이 필요합니다</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </header>
+            <!-- END OF HEADER -->
+            
+
+            <main id = "container" role="main">
+                <div id="NM_INT_LEFT" class="column_left">
+                    <div id="newsstand" class="sc_newscast">
+                        <h2 class="blind">뉴스스탠드</h2>
+                        <div id="NM_NEWSSTAND_HEADER" class="group_issue">
+                            <div class="issue_area">
+                                <a href="" class="link_media">연합뉴스</a> 
+
+                            </div>
+                            <div class="direct_area">
+                                <a href="" class="link_news">네이버뉴스</a>
+                                <a href="" class="link_direct">연예</a>
+                                <a href="" class="link_direct">스포츠</a>
+                                <a href="" class="link_direct">경제</a>
+                            </div>
+        
+                        </div>
+
+                        <div id="NM_NEWSSTAND_TITLE" class="group_title">
+                            <a href="" class="link_newsstand" target="_blank">
+                                뉴스스탠드
+                            </a>
+                            <div id="NM_NEWSSTAND_data_buttons" class="sort_area">
+                                <a href="" role="button" class="btn_sort">구독한 언론사</a>
+                                <a href="" role="button" class="btn_sort sort_on">전체언론사</a>
+                            </div>
+
+                            <div id="NM_NEWSSTAND_view_buttons" class="set_area">
+                                <a href="" role="button" class="btn_set"><i class="ico_list"><span class="blind">리스트형</span></i></a>
+                                <a href="" role="button" class="btn_set set_on"><i class="ico_title"><span class="blind">썸네일형</span></i></a>
+                                <a href="" role="button" class="btn_set" target="_blank"><i class="ico_set"><span class="blind">설정</span></i></a>
+                            </div>
+                            
+                        </div>
+
+                        <div id="NM_NEWSSTAND_VIEW_CONTAINER" style="position: relative;">
+                            <div id="NM_NEWSSTAND_DEFAULT_THUMB" class="group_news">
+                                <a href="" role="button" class="pm_btn_prev_l _NM_UI_PAGE_PREV"><i class="ico_btn"><span class="blind">이전</span></i></a>
+                                <a href="" role="button" class="pm_btn_next_l  _NM_UI_PAGE_NEXT"><i class="ico_btn"><span class="blind">다음</span></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="NM_THEMECAST_CONTENTS_CONTAINER">
+                        <div id="themecast" class="sc_themecast id_business">
+                            <h2 id="theme_cast" class="blind">주제별 캐스트</h2>
+                            <div class="theme_head">
+                                <div class="group_title">
+                                    <div class="title_area">
+                                        <strong class="title">오늘 읽을만한 글</strong>
+                                        <span class="dsc">주제별로 분류된 다양한 글 모음</span>
+                                    </div>
+                                    <div class="info_area">
+                                        <span class="info">
+                                            <strong class="new">2,147</strong>
+                                            개의 글
+                                        </span>
+                                        <a href="" id="NM_THEME_EDIT_SET" role="button" class="btn_set">관심주제 설정</a>
+                                    </div>
+                                </div>
+                                <div class="theme_fix_wrap">
+                                    <div id="NM_THEME_CATE_GROUPS" class="group_category">
+                                        <div class="main_category">
+                                            <a href="" role="button" class="pm_btn_prev NM_THEME_PREV"><i class="ico_btn"><span class="blind">이전</span></i></a>
+                                            <a href="" role="button" class="pm_btn_next NM_THEME_NEXT"><i class="ico_btn"><span class="blind">다음</span></i></a> 
+                                            <div id="NM_THEME_CATE_FLICK" class="_NM_UI_PAGE_CONTAINER">
+                                                <div class="eg-flick-viewport" style="position: relative; z-index: 5;  min-height: 100%; width: 100%; touch-action: pan-y; user-select: none; -webkit-user-drag: none; height: 49px;">
+                                                    <div style="width: 100%; height: 100%; will-change: transform; transform: translate3d(0px, 0px, 0px);">
+                                                        <div style="width: 750px; position: absolute; left: 0px; height: 49px;">
+                                                            <ul class="list_category" role="tablist">
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_enter" aria-selected="true">엔터</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_sports" aria-selected="false">스포츠</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_cargame" aria-selected="false">자동차</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_bboom" aria-selected="false">웹툰</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_finance" aria-selected="false">경제M</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_living" aria-selected="false">푸드</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_gameapp" aria-selected="false">게임</a>
+                                                                </li>
+                                                                <li class="category_item" role="presentation">
+                                                                    <a href="" role="tab" class="_NM_THEME_CATE tab id_movie" aria-selected="false">영화</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theme_cont"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="NM_INT_RIGHT" class="column_right"></div>
+            </main>
+
+            <footer>
+
+
+            </footer>
+        </div>
+    </body>
+</html>
