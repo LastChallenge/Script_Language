@@ -6,3 +6,7 @@ node_modules
 
 *.tmp
 *~
+
+node/dist
+
+public/dist
