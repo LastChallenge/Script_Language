@@ -8,7 +8,7 @@ const sentences = [
 
 
 function say({subject, verb, object}) {
-    console.log('${subject} ${verb} ${object}');
+    console.log(`${subject} ${verb} ${object}`);
 }
 
 for(let s of sentences) {
