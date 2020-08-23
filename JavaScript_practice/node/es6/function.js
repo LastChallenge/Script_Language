@@ -66,3 +66,110 @@ let o = {
 console.log(`f를 호출하기 전: o.message= "${o.message}"`);
 f(o);
 console.log(`f를 호출한 다음: o.message= "${o.message}"`);
+
+
+var a = {'id':1};
+var b = a;
+b = {'id': 2};  //새로운 객체를 생성
+console.log(a.id); // 1 b가 새로운 객체를 생성했기 때문에 a에 있는 id(객체)의 결과값은 1
+
+
+// Parameter
+//Do parameters determine the function?
+//many language function signature include parameter, example C language f() != f(x)
+//but JS is no such differece
+
+
+function f(x) {
+    return `in f: x=${x}`;
+}
+console.log(f());  // in f: x=undefined
+
+
+function getSentence({subject, verb, object}) {
+    return `${subject} ${verb} ${object}`;
+}
+
+function getSentence_to_arr([subject, verb, object]) {
+    return `${subject} ${verb} ${object}`;
+}
+
+const ST = {
+    subject: "I",
+    verb: "love",
+    object: "JS",
+};
+
+const arr = ["I", "love", "JS"];
+
+console.log(getSentence(ST));
+console.log(getSentence_to_arr(arr));
+
+
+// You can use the spread operator to take adventage of the extra parameters.
+
+function addPrefix(prefix, ...words) {
+
+    const prefixedWords = [];
+    for(let i = 0; i < words.length; i++) {
+        prefixedWords[i] = prefix + words[i];
+    }
+    return prefixedWords;
+}
+
+console.log(addPrefix("con", "verse", "vex"));
+
+
+// default parameter
+//Assgin default values to parameters
+
+function f(a, b ="default", c = 3) {
+    return `${a} - ${b} - ${c}`; 
+};
+f(5, 6, 7);  // 5 - 6 - 7
+f(5, 6);  // 5 - 6 - 3
+f(5);  // 5 - default - 3
+f();  // undefined - default - 3
+
+
+// property function in object
+
+const Info  = {
+    name: "Wallace",  //property primitive value
+    //bark: function() { return 'Woof!';},
+    bark() {return 'Woof!'},  //function property(method)
+};
+
+// this keyword
+
+const Info2 = {
+    name: "Wallace",
+    speak() {return `My name is ${this.name}`},
+};
+
+console.log(Info2.speak());
+
+// bad case avoid to this case
+
+const speak = Info2.speak;
+console.log(speak === Info2.speak);
+console.log(speak());
+
+
+// anonymous function
+
+const anonyf = function() {
+
+}
+
+// if you need to recursion this way
+
+const g = function f(stop) {
+    if(stop) {
+        console.log('f stopped');
+        return;
+    }
+    f(true);
+};
+
+g(false);
