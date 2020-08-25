@@ -173,3 +173,82 @@ const g = function f(stop) {
 };
 
 g(false);
+
+
+
+// arrow notation
+
+/*
+const f1 = function() { return "hello!";}
+const f1 = () => "hello!";
+
+const f2 = function(name) { return `Hello, ${name}`;}
+const f2 = name => `Hello ${name}`;
+
+const f3 = function(a,b) {return a + b;}
+const f3 = (a,b) =>  a + b;
+*/
+
+const getBackwards = {
+    name: 'Julie',
+    greetBackwards: function() {
+        const getReverseName = () => {
+            let nameBackwards = '';
+            for(let i = this.name.length-1; i>=0; i--) {
+                nameBackwards += this.name[i];
+            }
+            return nameBackwards;
+        };
+        return `${getReverseName()} si eman ym ,olleH`;
+    },
+};
+
+console.log(getBackwards.greetBackwards());
+
+const bruce = {name: "Bruce"};
+const madeline = {name: "madeline"};
+
+function greet() {
+    return `Hello, I'm ${this.name}`;
+}
+
+console.log(greet());
+console.log(greet.call(bruce));
+console.log(greet.call(madeline));
+
+function update(birthYear, occupation) {
+    this.birthYear = birthYear;
+    this.occupation = occupation;
+}
+
+update.call(bruce, 1949, 'singer');
+ //bruce는 이제 {name: "Bruce", birthYear: 1949, occupation:"singer"} 
+ console.log(bruce);
+ 
+ update.call(madeline, 1942, 'actress');
+//madeline은 이제 {name: "Madeline", birthYear: 1942, occupation:"actress"}
+
+update.apply(bruce, [1955, "actor"]);
+
+console.log(bruce);
+ 
+const arr2 = [2, 3, -5, 15, 7];
+// this 자리에 null이 들어간 이유는 Math.min, Math.max함수는 this에 관계없이 동작하기 때문에
+let min = Math.min.apply(null, arr2); 
+let max = Math.max.apply(null, arr2);
+
+console.log(min + "\t" + max);
+
+const newBruce = [1940, "martial artist"];
+update.call(bruce, ...newBruce);  //apply(bruce, newBruce)와 같습니다.
+console.log(Math.min(...arr2) + '\t' + Math.max(...arr2));
+
+const updateBruce = update.bind(bruce);
+
+updateBruce(1904, "actor");  //undefined ?????
+updateBruce.call(madeline, 1274, "king"); // undefined ?????
+
+const updateBruce1949 = update.bind(bruce, 1949);
+updateBruce1949("singer, songwriter");
+
+
