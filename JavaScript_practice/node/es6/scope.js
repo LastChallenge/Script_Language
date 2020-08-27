@@ -84,6 +84,7 @@ console.log('\n\n');
 
 
 // 너무 햇갈린다.. 
+// 체인 스코프에 의해 외부 블록의 x 변수는 가려짐(shadowing)
 {
     //외부 블록
     let x = {color: "blue"};
@@ -102,3 +103,90 @@ console.log('\n\n');
     console.log(y.color); //"red" x와 y는 같은 객체를 가리킵니다.
     console.log(z); 
 }
+console.log('\n');
+// function closure
+
+let globalFunc;
+{
+    let blockVar = 'a';
+    globalFunc = function() {   // let globalFunc = function() { }
+        console.log(blockVar);
+    }
+}
+
+globalFunc();
+
+
+// example 2
+let f;
+{
+    let o = {note: 'Safe'};
+    f = function() {
+        return o;
+    }
+    console.log(o.note);
+}
+
+
+let oRef = f();
+oRef.note = "Not so safe after all!";
+
+console.log(oRef.note);
+
+const message = (function() {
+    const secret = "I'm a secret!";
+    return `The secret is ${secret.length} characters long.`;
+})();
+
+console.log(message);
+console.log('\n');
+
+const f2 = (function() {
+    let count = 0;
+    return function() {
+        return `I have been called ${++count} time(s).`;
+    }
+})();
+
+console.log(f2());  // "I have been called 1 time(s)."
+console.log(f2());  // "I have been called 2 time(s)."
+
+
+//function scope & hoisting
+let var1;
+let var2 = undefined;
+var1;
+var2;
+//undefinedVar; ReferenceError: undefinedVar is not defined
+
+
+//before hoisting
+x2;
+var x2 = 3;
+x2;
+
+/*after hoisting
+var x2;
+x2;
+x2 = 3;
+x2;
+*/
+
+console.log('\n');
+
+var x3 = 3;
+if(x3 === 3) {
+    var x3 = 2;
+    console.log(x3);
+}
+console.log(x3);
+
+/*
+//function hoisting
+// Cannot access 'f3' before initialization
+f3();
+let f3 = function() {
+    console.log('f3');
+}
+*/
+
